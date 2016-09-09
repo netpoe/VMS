@@ -1,0 +1,11 @@
+laravel:
+  image: webdevops/php-nginx:alpine-3-php7
+  container_name: dev_fs
+  volumes:
+    - /Users/gandresibarra/Projects/Laravel/DevFS:/app
+  environment:
+    - WEB_DOCUMENT_INDEX=index.php
+    - WEB_DOCUMENT_ROOT=/app/public/
+    - APPLICATION_PATH=/app
+  ports:
+    - "3001:80"

@@ -1,0 +1,10 @@
+mysql:
+  container_name: database
+  image: mysql:5.5
+  ports:
+    - 3307:3306
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: KONFIO
+  volumes:
+    - ./my.conf:/etc/mysql/conf.d/config-file.cnf
