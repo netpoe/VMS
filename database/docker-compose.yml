@@ -4,7 +4,7 @@ mysql:
   ports:
     - 3307:3306
   environment:
-    MYSQL_ROOT_PASSWORD: root
     MYSQL_DATABASE: KONFIO
+    MYSQL_ROOT_PASSWORD: root
   volumes:
     - ./my.conf:/etc/mysql/conf.d/config-file.cnf
