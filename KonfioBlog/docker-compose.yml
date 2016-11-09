@@ -1,0 +1,13 @@
+camimos:
+  image: webdevops/php-nginx:alpine-3-php7
+  container_name: KonfioBlog
+  volumes:
+    - /Users/gandresibarra/Projects/Konfio/blog/wordpress:/app
+    - /Users/gandresibarra/Projects/Konfio/blog/parent:/app/wp-content/themes/konfio
+    - /Users/gandresibarra/Projects/Konfio/blog/child:/app/wp-content/themes/KonfioChild
+  environment:
+    - WEB_DOCUMENT_INDEX=index.php
+    - WEB_DOCUMENT_ROOT=/app
+    - APPLICATION_PATH=/app
+  ports:
+    - "3002:80"
