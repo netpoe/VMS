@@ -1,0 +1,4 @@
+phpapp:
+  build: ./
+  volumes:
+    - /Users/gandresibarra/Projects/Konfio/frontend:/app

@@ -1,0 +1,15 @@
+phpapp:
+  container_name: ${KONFIO_CONTAINER_NAME}
+  image: 180477243137.dkr.ecr.us-west-2.amazonaws.com/${KONFIO_MACHINE}:${KONFIO_MACHINE_TAG}
+  ports:
+    - "${KONFIO_PORT}:80"
+  environment:
+    - WEB_DOCUMENT_INDEX=index.php
+    - WEB_DOCUMENT_ROOT=/app/public/
+    - APPLICATION_PATH=/app 
+    - ENV=${KONFIO_ENV}
+    - db_hostname=${KONFIO_DB_HOST}
+    - db_port=${KONFIO_DB_PORT}
+    - db_password=${KONFIO_DB_PASSWORD}
+    - db_name=${KONFIO_DB_NAME}
+    - db_username=${KONFIO_DB_USERNAME}

@@ -1,0 +1,5 @@
+phpapp:
+  build: ./
+  volumes:
+    - /Users/gandresibarra/Projects/Konfio/backoffice:/app
+    - /Users/gandresibarra/Projects/Konfio/konfio_sdk:/app/vendor/konfio/sdk
